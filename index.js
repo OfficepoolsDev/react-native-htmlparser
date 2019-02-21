@@ -210,7 +210,7 @@ class HtmlParser extends Component {
         if (this.isInlineElement(childNode.nodeName) || this.isText(childNode.nodeName)) {
           children.push(this.processNode(childNode, `${key}_${index}`))
         } else {
-          console.error(`Inline element ${nodeName} can only have inline children, ${child} is invalid!`)
+          // console.error(`Inline element ${nodeName} can only have inline children, ${child} is invalid!`)
         }
       })
       return (<Text key={key} style={this.styleForTag(nodeName)}>{children}</Text>)
